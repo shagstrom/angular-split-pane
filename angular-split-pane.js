@@ -24,9 +24,9 @@ angular.module('shagstrom.angular-split-pane', [])
 			}
 		},
 		link: function($scope, element, attrs) {
-			var $firstComponent = element.find('.split-pane-component:first'),
-				$divider = element.find('.split-pane-divider'),
-				$lastComponent = element.find('.split-pane-component:last');
+			var $firstComponent = element.children('.split-pane-component:first'),
+				$divider = element.children('.split-pane-divider'),
+				$lastComponent = element.children('.split-pane-component:last');
 			if ($scope.components[0].width && $scope.components[0].width.match(/%$/)) {
 				element.addClass('vertical-percent');
 				var rightPercent = (100 - parseFloat($scope.components[0].width.match(/(\d+)%$/)[1])) + "%" ;
