@@ -24,7 +24,7 @@ Below is a basic example on how to use the directive. I'm using
             <script src="bower_components/angular-split-pane/angular-split-pane.js"></script>
             <style type="text/css">
                 html, body {
-                    /* The Split Pand needs a container with width and height. */
+                    /* The Split Pane needs a container with width and height. */
                     height: 100%;
                     min-height: 100%;
                     margin: 0;
