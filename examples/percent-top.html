@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Basic Example</title>
+		<title>Percent top</title>
 		<link rel="stylesheet" href="../bower_components/split-pane/split-pane.css" />
 		<script src="../bower_components/jquery/dist/jquery.min.js"></script>
 		<script src="../bower_components/angular/angular.js"></script>
@@ -23,13 +23,9 @@
 	</head>
 	<body ng-app="example">
 		<split-pane>
-			<split-pane-component height="20%">
-				<div>This is the left component</div>
-			</split-pane-component>
+			<split-pane-component height="20%">top</split-pane-component>
 			<split-pane-divider height="5px"></split-pane-divider>
-			<split-pane-component>
-				This is the right component
-			</split-pane-component>
+			<split-pane-component>bottom</split-pane-component>
 		</split-pane>
 	</body>
 	<script>

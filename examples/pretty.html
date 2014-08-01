@@ -3,8 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Fixed bottom</title>
+		<title>Basic Example</title>
 		<link rel="stylesheet" href="../bower_components/split-pane/split-pane.css" />
+		<link rel="stylesheet" href="../bower_components/split-pane/pretty-split-pane.css" />
 		<script src="../bower_components/jquery/dist/jquery.min.js"></script>
 		<script src="../bower_components/angular/angular.js"></script>
 		<script src="../bower_components/split-pane/split-pane.js"></script>
@@ -16,16 +17,23 @@
 				margin: 0;
 				padding: 0;
 			}
-			.split-pane-divider {
-				background: #aaa;
-			}
 		</style>
 	</head>
 	<body ng-app="example">
+		<div class="pretty-split-pane-frame">
 			<split-pane>
-				<split-pane-component>top</split-pane-component>
+				<split-pane-component>
+					<div class="pretty-split-pane-component-inner">
+						<h2>top component</h2>
+						<p>In this example I have added style from pretty-split-pane.css. Feel free to use it or style things your own way.</p>
+					</div>
+				</split-pane-component>
 				<split-pane-divider height="5px"></split-pane-divider>
-				<split-pane-component height="30em">bottom</split-pane-component>
+				<split-pane-component height="30em">
+					<div class="pretty-split-pane-component-inner">
+						<h2>bottom component</h2>
+					</div>
+				</split-pane-component>
 			</split-pane>
 		</div>
 	</body>

@@ -21,7 +21,7 @@ angular.module('shagstrom.angular-split-pane', [])
 			};
 			this.addDivider = function(attributes) {
 				$scope.divider = attributes;
-			}
+			};
 		},
 		link: function($scope, element, attrs) {
 			var $firstComponent = element.children('.split-pane-component:first'),
@@ -81,12 +81,8 @@ angular.module('shagstrom.angular-split-pane', [])
 		replace: true,
 		transclude: true,
 		require: '^splitPane',
-		scope: {
-			width: '@',
-			height: '@'
-		},
 		link: function($scope, element, attrs, paneCtrl) {
-			paneCtrl.addComponent({ width: $scope.width, height: $scope.height });
+			paneCtrl.addComponent({ width: attrs.width, height: attrs.height });
 		},
 		template: '<div class="split-pane-component" ng-transclude></div>'
 	};
@@ -97,12 +93,8 @@ angular.module('shagstrom.angular-split-pane', [])
 		replace: true,
 		transclude: true,
 		require: '^splitPane',
-		scope: {
-			width: '@',
-			height: '@'
-		},
 		link: function($scope, element, attrs, paneCtrl) {
-			paneCtrl.addDivider({ width: $scope.width, height: $scope.height });
+			paneCtrl.addDivider({ width: attrs.width, height: attrs.height });
 		},
 		template: '<div class="split-pane-divider" ng-transclude></div>'
 	};
