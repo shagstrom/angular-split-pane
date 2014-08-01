@@ -1,6 +1,6 @@
 /*!
 
-AngularJS Split Pane directive v0.1.0
+AngularJS Split Pane directive v0.1.1
 
 Copyright (c) 2014 Simon Hagström
 
