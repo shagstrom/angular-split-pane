@@ -16,8 +16,17 @@
 				margin: 0;
 				padding: 0;
 			}
+			/* The styling bolow is very simple. You can style things your own way. */
+			body {
+				box-sizing: border-box;
+				background: #aaa;
+				padding: 5px;
+			}
 			.split-pane-divider {
 				background: #aaa;
+			}
+			.split-pane-component {
+				background: #fff;
 			}
 		</style>
 	</head>
@@ -25,7 +34,7 @@
 		<split-pane>
 			<split-pane-component>top</split-pane-component>
 			<split-pane-divider height="5px"></split-pane-divider>
-			<split-pane-component height="30em">
+			<split-pane-component height="10em">
 				<split-pane>
 					<split-pane-component width="40%">left</split-pane-component>
 					<split-pane-divider width="5px"></split-pane-divider>
