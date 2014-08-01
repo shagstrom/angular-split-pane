@@ -3,7 +3,7 @@ angular-split-pane
 
 An AngularJS Split Pane directive
 
-The directive should work in IE8 and above as well as in Chrome, Safari and Firefox.
+The directive should work in IE9 and above as well as in Chrome, Safari and Firefox.
 
 You can add angular-split-pane.js by to you project by installing with bower
 
