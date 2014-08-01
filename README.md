@@ -9,7 +9,7 @@ You can add angular-split-pane.js by to you project by installing with bower
 
     bower install angular-split-pane
 
-Below is a basic example on how to use the directive. 
+Below is a basic example on how to use the directive. I'm using 
 
     <!DOCTYPE html>
     <html>
@@ -24,11 +24,13 @@ Below is a basic example on how to use the directive.
             <script src="bower_components/angular-split-pane/angular-split-pane.js"></script>
             <style type="text/css">
                 html, body {
+                    /* The Split Pand needs a container with width and height. */
                     height: 100%;
                     min-height: 100%;
                     margin: 0;
                     padding: 0;
                 }
+                /* The styling below is very simple. You can style things you own way. */
                 .split-pane-divider {
                     background: #aaa;
                 }
@@ -36,13 +38,9 @@ Below is a basic example on how to use the directive.
         </head>
         <body ng-app="example">
             <split-pane>
-                <split-pane-component width="20em">
-                    <div>This is the left component</div>
-                </split-pane-component>
+                <split-pane-component width="20em">This is the left component</split-pane-component>
                 <split-pane-divider width="5px"></split-pane-divider>
-                <split-pane-component>
-                    This is the right component
-                </split-pane-component>
+                <split-pane-component>This is the right component</split-pane-component>
             </split-pane>
         </body>
         <script>
