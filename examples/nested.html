@@ -3,8 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Nested</title>
+		<title>Nested and pretty</title>
 		<link rel="stylesheet" href="../bower_components/split-pane/split-pane.css" />
+		<link rel="stylesheet" href="../bower_components/split-pane/pretty-split-pane.css" />
 		<script src="../bower_components/jquery/dist/jquery.min.js"></script>
 		<script src="../bower_components/angular/angular.js"></script>
 		<script src="../bower_components/split-pane/split-pane.js"></script>
@@ -16,38 +17,36 @@
 				margin: 0;
 				padding: 0;
 			}
-			/* The styling bolow is very simple. You can style things your own way. */
-			body {
-				box-sizing: border-box;
-				background: #aaa;
-				padding: 5px;
-			}
-			.split-pane-divider {
-				background: #aaa;
-			}
-			.split-pane-component {
-				background: #fff;
-			}
 		</style>
 	</head>
 	<body ng-app="example">
-		<split-pane>
-			<split-pane-component>top</split-pane-component>
-			<split-pane-divider height="5px"></split-pane-divider>
-			<split-pane-component height="10em">
-				<split-pane>
-					<split-pane-component width="40%">left</split-pane-component>
-					<split-pane-divider width="5px"></split-pane-divider>
-					<split-pane-component>
-						<split-pane>
-							<split-pane-component height="40%">top</split-pane-component>
-							<split-pane-divider height="5px"></split-pane-divider>
-							<split-pane-component>bottom</split-pane-component>
-						</split-pane>
-					</split-pane-component>
-				</split-pane>
-			</split-pane-component>
-		</split-pane>
+		<div class="pretty-split-pane-frame">
+			<split-pane>
+				<split-pane-component>
+					<div class="pretty-split-pane-component-inner"><p>top</p></div>
+				</split-pane-component>
+				<split-pane-divider height="5px"></split-pane-divider>
+				<split-pane-component height="10em">
+					<split-pane>
+						<split-pane-component width="40%">
+							<div class="pretty-split-pane-component-inner"><p>left</p></div>
+						</split-pane-component>
+						<split-pane-divider width="5px"></split-pane-divider>
+						<split-pane-component>
+							<split-pane>
+								<split-pane-component height="40%">
+									<div class="pretty-split-pane-component-inner"><p>top</p></div>
+								</split-pane-component>
+								<split-pane-divider height="5px"></split-pane-divider>
+								<split-pane-component>
+									<div class="pretty-split-pane-component-inner"><p>bottom</p></div>
+								</split-pane-component>
+							</split-pane>
+						</split-pane-component>
+					</split-pane>
+				</split-pane-component>
+			</split-pane>
+		</div>
 	</body>
 	<script>
 		angular.module('example', ['shagstrom.angular-split-pane']);
