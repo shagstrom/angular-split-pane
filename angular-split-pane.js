@@ -11,7 +11,7 @@ https://raw.github.com/shagstrom/split-pane/master/LICENSE
 angular.module('shagstrom.angular-split-pane', [])
 .directive('splitPane', function() {
 	return {
-		restrict: 'E',
+		restrict: 'EA',
 		replace: true,
 		transclude: true,
 		controller: function($scope) {
@@ -77,7 +77,7 @@ angular.module('shagstrom.angular-split-pane', [])
 })
 .directive('splitPaneComponent', function() {
 	return {
-		restrict: 'E',
+		restrict: 'EA',
 		replace: true,
 		transclude: true,
 		require: '^splitPane',
@@ -89,7 +89,7 @@ angular.module('shagstrom.angular-split-pane', [])
 })
 .directive('splitPaneDivider', function() {
 	return {
-		restrict: 'E',
+		restrict: 'EA',
 		replace: true,
 		transclude: true,
 		require: '^splitPane',
