@@ -58,7 +58,7 @@ angular.module('shagstrom.angular-split-pane', [])
 				element.addClass('fixed-top');
 				$firstComponent.css({ height: $scope.components[0].height });
 				$divider.css({ top: $scope.components[0].height, height: $scope.divider.height });
-				$lastComponent.css({ top: $scope.components[0].height, marginLeft: $scope.divider.height });
+				$lastComponent.css({ top: $scope.components[0].height, marginTop: $scope.divider.height });
 			} if ($scope.components[1].height && $scope.components[1].height.match(/%$/)) {
 				element.addClass('horizontal-percent');
 				$firstComponent.css({ bottom: $scope.components[1].height, marginBottom: $scope.divider.height });
