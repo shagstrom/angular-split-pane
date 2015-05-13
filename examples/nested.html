@@ -19,36 +19,36 @@
 			}
 		</style>
 	</head>
-	<body ng-app="example">
+	<body data-ng-app="example">
 		<div class="pretty-split-pane-frame">
-			<split-pane>
-				<div split-pane-component>
+			<div data-split-pane>
+				<div data-split-pane-component>
 					<div class="pretty-split-pane-component-inner"><p>top</p></div>
 				</div>
-				<div split-pane-divider height="5px"></div>
-				<div split-pane-component height="10em">
-					<split-pane>
-						<div split-pane-component width="40%">
+				<div data-split-pane-divider data-height="5px"></div>
+				<div data-split-pane-component data-height="10em">
+					<div data-split-pane>
+						<div data-split-pane-component data-width="40%">
 							<div class="pretty-split-pane-component-inner"><p>left</p></div>
 						</div>
-						<div split-pane-divider width="5px"></div>
-						<div split-pane-component>
-							<split-pane>
-								<div split-pane-component height="40%">
+						<div data-split-pane-divider data-width="5px"></div>
+						<div data-split-pane-component>
+							<div data-split-pane>
+								<div data-split-pane-component data-height="40%">
 									<div class="pretty-split-pane-component-inner"><p>top</p></div>
 								</div>
-								<div split-pane-divider height="5px"></div>
-								<div split-pane-component>
+								<div data-split-pane-divider data-height="5px"></div>
+								<div data-split-pane-component>
 									<div class="pretty-split-pane-component-inner"><p>bottom</p></div>
 								</div>
-							</split-pane>
+							</div>
 						</div>
-					</split-pane>
+					</div>
 				</div>
-			</split-pane>
+			</div>
 		</div>
+		<script>
+			angular.module('example', ['shagstrom.angular-split-pane']);
+		</script>
 	</body>
-	<script>
-		angular.module('example', ['shagstrom.angular-split-pane']);
-	</script>
 </html>

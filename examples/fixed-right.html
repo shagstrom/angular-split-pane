@@ -30,14 +30,14 @@
 			}
 		</style>
 	</head>
-	<body ng-app="example">
-		<split-pane type="fixed-right">
-			<div split-pane-component>left</div>
-			<div split-pane-divider width="5px"></div>
-			<div split-pane-component width="30em">right</div>
-		</split-pane>
+	<body data-ng-app="example">
+		<div data-split-pane>
+			<div data-split-pane-component>left</div>
+			<div data-split-pane-divider data-width="5px"></div>
+			<div data-split-pane-component data-width="30em">right</div>
+		</div>
+		<script>
+			angular.module('example', ['shagstrom.angular-split-pane']);
+		</script>
 	</body>
-	<script>
-		angular.module('example', ['shagstrom.angular-split-pane']);
-	</script>
 </html>
