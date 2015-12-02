@@ -21,7 +21,7 @@ Below is a basic example on how to use the directive. I'm using
 			<script src="../bower_components/jquery/dist/jquery.min.js"></script>
 			<script src="../bower_components/angular/angular.js"></script>
 			<script src="../bower_components/split-pane/split-pane.js"></script>
-			<script src="../angular-split-pane.js"></script>
+			<script src="../bower_components/angular-split-pane/angular-split-pane.js"></script>
 			<style type="text/css">
 				html, body {
 					height: 100%;
