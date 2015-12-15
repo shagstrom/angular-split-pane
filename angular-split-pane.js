@@ -1,6 +1,6 @@
 /*!
 
-AngularJS Split Pane directive v1.1.0
+AngularJS Split Pane directive v1.2.0
 
 Copyright (c) 2014 Simon Hagström
 
@@ -14,7 +14,7 @@ angular.module('shagstrom.angular-split-pane', [])
 		restrict: 'EA',
 		replace: true,
 		transclude: true,
-		controller: function($scope) {
+		controller: ['$scope', function($scope) {
 			$scope.components = [];
 			this.addComponent = function(attributes) {
 				$scope.components.push(attributes);
@@ -22,7 +22,7 @@ angular.module('shagstrom.angular-split-pane', [])
 			this.addDivider = function(attributes) {
 				$scope.divider = attributes;
 			};
-		},
+		}],
 		link: function($scope, element, attrs) {
 			var $firstComponent = element.children('.split-pane-component:first'),
 				$divider = element.children('.split-pane-divider'),

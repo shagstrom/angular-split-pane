@@ -1,7 +1,7 @@
 {
   "name": "angular-split-pane",
   "main": "angular-split-pane.js",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "homepage": "https://github.com/shagstrom/angular-split-pane",
   "authors": [
     "Simon Hagström <simon.hagstrom@gmail.com>"
@@ -9,7 +9,7 @@
   "description": "An AngularJS Split Pane directive",
   "license": "MIT",
   "dependencies": {
-    "split-pane": "0.5.0",
+    "split-pane": "0.6.1",
     "angular": "~1.2.0"
   },
   "ignore": [
