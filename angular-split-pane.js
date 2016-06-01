@@ -1,8 +1,8 @@
 /*!
 
-AngularJS Split Pane directive v1.2.0
+AngularJS Split Pane directive v1.3.0
 
-Copyright (c) 2014 Simon Hagström
+Copyright (c) 2014-2016 Simon Hagström
 
 Released under the MIT license
 https://raw.github.com/shagstrom/split-pane/master/LICENSE
@@ -14,6 +14,9 @@ angular.module('shagstrom.angular-split-pane', [])
 		restrict: 'EA',
 		replace: true,
 		transclude: true,
+		scope: {
+			splitPaneProperties: '='
+		},
 		controller: ['$scope', function($scope) {
 			$scope.components = [];
 			this.addComponent = function(attributes) {
@@ -71,6 +74,31 @@ angular.module('shagstrom.angular-split-pane', [])
 				$lastComponent.css({ height: $scope.components[1].height });
 			}
 			element.splitPane();
+			var localFirstComponentSize, localLastComponentSize;
+			element.on('splitpaneresize', function (event, splitPaneProperties) {
+				if ($scope.splitPaneProperties && event.target === element[0] &&
+						localFirstComponentSize !== splitPaneProperties.firstComponentSize &&
+						localLastComponentSize !== splitPaneProperties.lastComponentSize) {
+					$scope.$apply(function () {
+						localFirstComponentSize = splitPaneProperties.firstComponentSize;
+						$scope.splitPaneProperties.firstComponentSize = splitPaneProperties.firstComponentSize;
+						localLastComponentSize = splitPaneProperties.lastComponentSize;
+						$scope.splitPaneProperties.lastComponentSize = splitPaneProperties.lastComponentSize;
+					});
+				}
+			});
+			$scope.$watch('splitPaneProperties.firstComponentSize', function (firstComponentSize) {
+				if ((firstComponentSize || firstComponentSize === 0) && firstComponentSize !== localFirstComponentSize) {
+					localFirstComponentSize = firstComponentSize;
+					element.splitPane('firstComponentSize', firstComponentSize);
+				}
+			});
+			$scope.$watch('splitPaneProperties.lastComponentSize', function (lastComponentSize) {
+				if ((lastComponentSize || lastComponentSize === 0) && lastComponentSize !== localLastComponentSize) {
+					localLastComponentSize = lastComponentSize;
+					element.splitPane('lastComponentSize', lastComponentSize);
+				}
+			});
 		},
 		template: '<div class="split-pane" ng-transclude></div>'
 	};
