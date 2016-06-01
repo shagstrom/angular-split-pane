@@ -3,7 +3,7 @@ angular-split-pane
 
 An AngularJS Split Pane directive
 
-![Demo](http://www.dreamchain.com/static/angular-split-pane/examples/nested.html)
+[Demo](http://www.dreamchain.com/static/angular-split-pane/examples/nested.html)
 
 The directive should work in IE8 and above as well as in Chrome, Safari and Firefox.
 
@@ -19,7 +19,7 @@ You can get and set component sizes in the object specified by attribute "split-
 
 Below is a basic example on how to use the directive:
 
-![Basic Demo](http://www.dreamchain.com/static/angular-split-pane/examples/fixed-left.html)
+[Basic Demo](http://www.dreamchain.com/static/angular-split-pane/examples/fixed-left.html)
 
 	<!DOCTYPE html>
 	<html>
@@ -54,7 +54,7 @@ Below is a basic example on how to use the directive:
 
 Here is an example where we are getting and setting component sizes:
 
-![Set component size Demo](http://www.dreamchain.com/static/angular-split-pane/examples/set-component-size.html)
+[Set component size Demo](http://www.dreamchain.com/static/angular-split-pane/examples/set-component-size.html)
 
 	<!DOCTYPE html>
 	<html>
